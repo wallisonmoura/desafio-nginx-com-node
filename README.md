@@ -10,5 +10,5 @@ O retorno da aplicação node.js para o nginx deverá ser:
 
 - Lista de nomes cadastrada no banco de dados.
 
-Comando:
+<h2>Comando:</h2>
 docker-compose up -d
