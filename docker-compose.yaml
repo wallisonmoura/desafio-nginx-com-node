@@ -17,13 +17,15 @@ services:
       - db
 
   db:
-    image: mysql:5.7
+    build:
+      context: datadb
     command: --innodb-use-native-aio=0
     container_name: db
     restart: always
     tty: true
     volumes:
       - ./mysql:/var/lib/mysql
+      - ./mysql:/docker-entrypoint-initdb.
     environment:
       - MYSQL_DATABASE=nodedb
       - MYSQL_ROOT_PASSWORD=root
